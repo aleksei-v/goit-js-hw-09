@@ -1,0 +1,42 @@
+@import "https://unpkg.com/open-props";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    place-items: center;
+    min-height: 100vh;
+}
+
+button {
+    font-family: var(--font-sans);
+    font-weight: var(--font-weight-6);
+    font-size: var(--font-size-5);
+    color: var(--gray-8);
+    background: #00ff00;
+    border: 1px solid black;
+    padding: var(--size-2) var(--size-4);
+
+    cursor: pointer;
+}
+
+#datetime-picker {
+    margin-right: 100px;
+    margin-bottom: 50px;
+}
+
+button:active {
+    --y: 5%;
+    --scale: 0.9;
+    --border-scale: 0.9, 0.8;
+}
+.timer {
+    display: flex;
+}
+.field {
+    display: grid;
+}
+.field:not(:last-child) {
+    margin-right: 25px;
+}
