@@ -11,7 +11,8 @@ const refs = {
 
 let intervalId = null;
 let isActive = false;
-refs.stop.setAttribute("disabled", "true")
+refs.stop.setAttribute("disabled", "true");
+
 const startChangingColor = () => {
     if (isActive) {
         return
@@ -21,6 +22,7 @@ const startChangingColor = () => {
     refs.start.setAttribute("disabled", "true");
     refs.stop.removeAttribute("disabled");
     refs.start.style.cursor = "not-allowed";
+    refs.stop.style.cursor = "pointer";
     intervalId = setInterval(isChangingColor, 1000);
     
 }
@@ -29,6 +31,7 @@ const stopChangingColor = () => {
     isActive = false;
     refs.start.removeAttribute("disabled");
     refs.start.style.cursor = "pointer";
+    refs.stop.style.cursor = "not-allowed";
     refs.stop.setAttribute("disabled", "true");
 }
 
